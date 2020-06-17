@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 var VueScrollTo = require('vue-scrollto');
  
-Vue.use(VueScrollTo)
+Vue.use(VueScrollTo, {
+  offset: -15,
+})
 Vue.config.productionTip = false
 
 new Vue({

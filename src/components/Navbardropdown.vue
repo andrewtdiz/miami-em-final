@@ -2,7 +2,7 @@
   <div class="text-gray-200 cursor-pointer flex items-center relative"  @mouseenter="hovering = true" @mouseleave="hovering = false">
         
         <div class="relative flex items-center">
-            <p class="text-sm text-black font-medium py-2 px-2 rounded uppercase">{{title}}</p>
+            <p class="text-sm text-black font-medium py-2 px-2 rounded uppercase" style="cursor: pointer">{{title}}</p>
             <div class="absolute bottom-0 pointer-events-none bg-blue-500 navbarbottom" style='height:2px;' :class="hovering ? ['w-full', 'opacity-100'] : ['w-0', 'opacity-0']"></div>
             <svg version="1.1" class="h-2 w-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004; transform:rotate(90deg)" xml:space="preserve">
@@ -20,9 +20,12 @@
         name="slide-fade"
         >
             <div class="absolute top-0 mt-20 w-48 flex flex-col items-stretch border border-gray-200 bg-white shadow-lg" v-if="hovering">
-                <div v-for="(link, ind3) in list" :key="ind3" class="w-full py-3 text-black border-b border-gray-200 hover:bg-blue-400 hover:text-white">
-                    <p class=" font-normal text-left px-4 ">{{link.name}}</p>
-                </div>
+                <router-link v-for="(link, ind3) in list" :key="ind3" :to="link.path">
+                    <div  class="w-full py-3 text-black border-b border-gray-200 hover:bg-blue-400 hover:text-white">
+                        <p class=" font-normal text-left px-4 " style="cursor: pointer !important;">{{link.name}}</p>
+                    </div>
+                </router-link>
+                
             </div>
         </transition>
           
@@ -36,7 +39,15 @@ export default {
         return{ 
             hovering: false,
         }
-    }  
+    },
+    watch: {
+        '$router.path': function() {
+            this.hovering = false
+        },
+        '$router.params.id': function() {
+            this.hovering = false
+        }
+    }
     
 }
 </script>
