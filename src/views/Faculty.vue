@@ -2,7 +2,7 @@
    <div class="flex flex-col w-full relative">
       <Navbar/>
        <div class="mt-8 h-screen w-full flex flex-col">
-            <section class="text-gray-700 bg-gray-200 body-font">
+            <section class="text-gray-700 bg-image body-font">
                 <div class="container bg-white shadow-xl px-5 rounded-md my-16 py-8 mx-auto">
                     <div class="flex flex-col text-center w-full mb-20">
                     <h1 class="text-2xl lg:text-6xl text-gray-800 font-bold">Faculty</h1>
@@ -19,9 +19,9 @@
                             <div class="w-full flex flex-col items-stretch">
                                 <h2 class="title-font font-bold text-lg mb-1 text-gray-900">{{resident.name}}</h2>
                                 <h3 class="text-gray-600 text-xs font-bold uppercase leading-wide mb-3">{{resident.position}}</h3>
-                                <p class="text-left mb-1"> <span class="font-bold text-left w-full text-sm text-gray-800"> Med School: </span>{{resident.about["Med School"]}}</p>
-                                <p class="text-left mb-4"> <span class="font-bold text-left w-full text-sm text-gray-800">  Residency: </span>{{resident.about["Residency"]}}</p>
-                                <p class="text-left mb-4"> <span class="font-bold text-left w-full text-sm text-gray-800">  Interest: </span>{{resident.about["Interests"]}}</p>
+                                <p class="text-left mb-1"> <span class="font-bold text-left w-full text-sm text-gray-900"> Med School: </span>{{resident.about["Med School"]}}</p>
+                                <p class="text-left mb-4"> <span class="font-bold text-left w-full text-sm text-gray-900">  Residency: </span>{{resident.about["Residency"]}}</p>
+                                <p class="text-left mb-4"> <span class="font-bold text-left w-full text-sm text-gray-900">  Interest: </span>{{resident.about["Interests"]}}</p>
                                 <span class="inline-flex">
                                 <a class="text-gray-500">
                                     <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -87,5 +87,11 @@ export default {
 </script>
 
 <style>
-
+.bg-image {
+  background-image: url("../assets/jackson.jpg");
+  right: 0;
+  top: -400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 </style>

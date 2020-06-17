@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    navMenu: false,
     routes: [
       {
         path: '/',
@@ -69,6 +70,10 @@ export default new Vuex.Store({
           {
             path: '/faculty',
             name: 'Faculty',
+          },
+          {
+            path: '/residentlife',
+            name: 'Resident Life',
           },
           {
             path: '/2021',
@@ -722,33 +727,105 @@ export default new Vuex.Store({
     },
     alumni: [
       {
-        name: 'Dr. Daniel Hercz',
+        name: 'Henry Zeng, MD',
+        year: 'Class of 2019',
+        where: 'Hospice and Palliative Medicine Fellowship at Stanford University',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Natalia Alvarez, MD',
+        year: 'Class of 2019',
+        where: 'Boston University School of Medicine',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Jonathan Balakumar, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician in Los Angeles, CA',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Peter (Martin) Sayers. MD',
+        year: 'Class of 2019',
+        where: 'Undersea and Hyperbaric Medicine Fellowship at Duke University',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Adam Brunson, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician in Miami, FL',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Emily Cooper, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician in Grapevine, Texas',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Marisa Gilbert, MD',
+        year: 'Class of 2019',
+        where: 'Neuro Critical Care Fellowship at Jackson Memorial Hospital',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Daniel Hercz, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician in Miami, FL',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Lavern Keitt, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician (locums) in Miami, FL',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Jeff Lombardo, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician in North Miami Beach, FL',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Marisa Gilbert, MD',
         year: 'Class of 2019',
         where: 'Jackson Memorial Hospital',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
       },
       {
-        name: 'Dr. Daniel Hercz',
+        name: 'Michael Roberds, MD',
         year: 'Class of 2019',
-        where: 'Jackson Memorial Hospital',
+        where: 'Attending physician in Miami, FL',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
       },
       {
-        name: 'Dr. Daniel Hercz',
+        name: 'Laura Scheidt, MD',
         year: 'Class of 2019',
-        where: 'Jackson Memorial Hospital',
+        where: 'Attending physician in Miami, FL',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
       },
       {
-        name: 'Dr. Daniel Hercz',
+        name: 'Adam Sienkiewicz, MD',
         year: 'Class of 2019',
-        where: 'Jackson Memorial Hospital',
+        where: 'Attending physician in Naples, FL',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
       },
       {
-        name: 'Dr. Daniel Hercz',
+        name: 'Christopher Sweat, MD',
         year: 'Class of 2019',
-        where: 'Jackson Memorial Hospital',
+        where: 'Medical Toxicology Fellowship at Regions Hospital',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Alexander Thai, MD',
+        year: 'Class of 2019',
+        where: 'Attending physician with the United States Air Force in San Antonio, TX',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
+      },
+      {
+        name: 'Ariana Weber, MD',
+        year: 'Class of 2019',
+        where: 'EMS Fellowship at Boston Medical Center',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum. Praesent lacus lectus, ultrices at rhoncus et, tincidunt eu turpis. Morbi libero nunc, interdum a varius sed, gravida a enim. Integer nunc est, vulputate vitae nulla quis, hendrerit mattis odio.',
       },
     ],
@@ -1049,10 +1126,18 @@ export default new Vuex.Store({
         
       },
       ],
+      imageViewing: false,
+
   },
   getters: {
     getFaculty(state) {
       return state.faculty
+    },
+    getImageViewing(state) {
+      return state.imageViewing
+    },
+    getNavMenu(state) {
+      return state.navMenu
     },
     getRoutes(state){
       return state.routes
@@ -1071,6 +1156,12 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    flipNav(state){
+      state.navMenu = !state.navMenu
+    },
+    changeNav(state, val) {
+      state.navMenu = val
+    },
   },
   actions: {
   },

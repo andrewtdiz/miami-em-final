@@ -6,7 +6,7 @@
         </div>
         <div class="absolute pt-40 flex flex-col justify-start items-center w-full" style="height: 100vh; z-index: 5;">
           <p class="text-6xl text-white font-medium">Welcome</p>
-          <p class="text-xl text-white font-normal w-1/3">To the official website of the Jackson Memorial Hospital Emergency Medicine program</p>
+          <p class="text-base md:text-xl text-white font-normal w-full md:w-1/3">To the official website of the Jackson Memorial Hospital Emergency Medicine program</p>
         </div>
         <div class="absolute pt-40 flex flex-col justify-end mb-6 items-center w-full" style="height: 100vh; z-index: 5;">
           <p class="text-xl text-white font-normal mb-6 hover:underline cursor-pointer" v-scroll-to="'#learn'">Scroll down to see more</p>
@@ -21,7 +21,7 @@
         <div class="container px-5 py-24 mx-auto">
           <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
             <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">Producing the next generation of Emergency Phyisicians</h1>
-            <button class="flex-shrink-0 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg mt-10 sm:mt-0" v-scroll-to="'#learn'">Learn More</button>
+            <button class="flex-shrink-0 mx-auto sm:mx-0 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg mt-10 sm:mt-0" v-scroll-to="'#learn'">Learn More</button>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@
             </h1>
             <p class="mb-8 leading-relaxed">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, enim id malesuada venenatis, enim ante aliquam eros, sit amet fringilla dolor justo non mi. Fusce vel augue sed lacus consequat bibendum. Pellentesque faucibus eros vitae est fermentum commodo. Praesent viverra ut neque et varius. Nullam libero mi, efficitur ut lobortis in, eleifend et ligula. Pellentesque semper neque sit amet tincidunt aliquam. "</p>
             <h2 class="font-bold title-font text-black text-md">Christopher Freeman, MD, FACEP</h2>
-            <h3 class="tracking-wide text-gray-500 text-xs font-normal title-font mb-4 uppercase">Program Director</h3>
+            <h3 class="tracking-wide text-gray-700 text-xs font-normal title-font mb-4 uppercase">Program Director</h3>
 
 
           </div>
@@ -78,7 +78,7 @@
               <img class="h-12 mr-3 object-cover w-12 rounded-full" src="../assets/timothy.png" alt="">
               <div class="flex flex-col">
                   <h2 class="font-bold title-font text-black text-md">Timothy Montrief, MD</h2>
-                  <p class="text-gray-600">PGY3</p>
+                   <h3 class="tracking-wide text-gray-700 text-xs font-normal title-font mb-4 uppercase">Class of 2020</h3>
               </div>
                 
             </div>

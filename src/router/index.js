@@ -44,6 +44,14 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Sites" */ '../views/Faculty.vue')
   },
+  {
+    path: '/residentlife',
+    name: 'Resident Life',
+    // route level code-splitting
+    // this generates a separate chunk (Sites.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Sites" */ '../views/Life.vue')
+  },
   { path: '/:id', component: Residents },
 ]
 

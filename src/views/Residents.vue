@@ -7,19 +7,19 @@
                     <div class="flex flex-col text-center w-full mb-20">
                     <h1 class="text-2xl lg:text-6xl text-gray-800 font-bold">Class of {{$route.params.id}}</h1>
 
-                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum.</p>
+                    <p class="lg:w-1/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum.</p>
                     </div>
                     <section class="text-gray-700 body-font">
                         <div class="container px-5 mx-auto">
                             <div class="flex flex-wrap -m-2">
                             
-                            <div v-for="(resident, ind) in residents[$route.params.id]" v-scroll-to="{ el: '#' + resident.name.split(' ').join('') }" :key="ind+112"  class="p-4 lg:w-1/4 md:w-1/2">
+                            <div v-for="(resident, ind) in residents[$route.params.id]" v-scroll-to="{ el: '#' + resident.name.split(' ').join('') }" :key="ind+112"  class="p-4 mx-auto sm:mx-0 lg:w-1/4 md:w-1/2">
                             <div class="h-full flex flex-col items-center text-center">
                             <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/201x201">
                             <div class="w-full">
                                 <h2 class="title-font font-bold text-lg mb-2 text-gray-900">{{resident.name}}</h2>
-                                <p class="mb-1"> <span class="font-bold text-sm text-gray-800"> Hometown: </span>{{resident.hometown}}</p>
-                                <p class="mb-4"> <span class="font-bold text-sm text-gray-800">  Med School: </span>{{resident.med}}</p>
+                                <p class="mb-1"> <span class="font-bold text-sm text-gray-900"> Hometown: </span>{{resident.hometown}}</p>
+                                <p class="mb-4"> <span class="font-bold text-sm text-gray-900">  Med School: </span>{{resident.med}}</p>
                                 <span class="inline-flex">
                                 <a class="text-gray-500">
                                     <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -48,16 +48,16 @@
 
 
                 <section v-for="(resident,ind) in residents[$route.params.id]" :id="resident.name.split(' ').join('')" :key="ind+99" class="text-gray-700 body-font">
-                    <div class="container mx-auto flex px-5 py-16 border-b border-t border-gray-200 items-center" :class="ind%2==1 ? 'flex-row-reverse' : 'flex-row'" >
+                    <div class="container mx-auto flex flex-col sm:flex-row px-5 py-16 border-b border-t border-gray-200 items-center" :class="ind%2==1 ? 'flex-row-reverse' : 'flex-row'" >
                         <div class="md:w-1/4 w-5/6 mb-10 md:mb-0">
                             <img class="object-cover object-center rounded mx-auto" alt="hero" :src="'https://dummyimage.com/720x600'">
                         </div>
-                        <div class="md:flex-1 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pr-24', 'md:pr-16']">
+                        <div class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pr-24', 'md:pr-16']">
                             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{resident.name}}
                             </h1>
-                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-700">Why Jackson: </span> <span v-html="resident.why"> </span></p>
-                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-700">Hobbies: </span> <span v-html="resident.hobbies"> </span></p>
-                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-700">Favoite thing about Miami: </span> <span v-html="resident.favorite"> </span></p>
+                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-900">Why Jackson: </span> <span v-html="resident.why"> </span></p>
+                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-900">Hobbies: </span> <span v-html="resident.hobbies"> </span></p>
+                            <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-900">Favoite thing about Miami: </span> <span v-html="resident.favorite"> </span></p>
                             
                         </div>
                     </div>

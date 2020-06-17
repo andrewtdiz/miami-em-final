@@ -13,7 +13,7 @@
                     
                         <div v-for="(site, ind) in clincalSites" :key="ind" v-scroll-to="{ el: '#' + site.title.split(' ').join('') }" class=" cursor-pointer p-4 lg:w-1/3 md:w-1/2" >
                             <div class="h-full flex flex-col items-center text-center">
-                            <img alt="team" class="opacity-85 hover:opacity-100 flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" :src="site.img">
+                            <img alt="team" class="md:opacity-85 hover:opacity-100 flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" :src="site.img">
                             <div class="w-full">
                                 <h2 class="title-font font-bold text-lg text-gray-900">{{site.title}}</h2>
                                 <p class="mb-4">{{site.shortDesc}}</p>
@@ -60,11 +60,11 @@
                 </section>
 
                 <section v-for="(site,ind) in clincalSites" :id="site.title.split(' ').join('')" :key="ind+99" class="text-gray-700 body-font">
-                    <div class="container mx-auto flex px-5 py-16 border-b border-t border-gray-200 items-center" :class="ind%2==1 ? 'flex-row-reverse' : 'flex-row'" >
-                        <div class="md:w-1/4 w-5/6 mb-10 md:mb-0">
+                    <div class="container mx-auto flex flex-col sm:flex-row justify-center px-5 py-16 border-b border-t border-gray-200 items-center" :class="ind%2==1 ? 'flex-row-reverse' : 'flex-row'" >
+                        <div class="md:w-1/3 w-5/6 mb-10 md:mb-0">
                             <img class="object-cover object-center rounded mx-auto" alt="hero" :src="site.img">
                         </div>
-                        <div class="md:flex-1 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pr-24', 'md:pr-16']">
+                        <div class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pr-24', 'md:pr-16']">
                             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{site.title}}
                             </h1>
                             <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-700">Description: </span> <span v-html="site.desc"> </span></p>

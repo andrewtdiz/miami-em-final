@@ -1,9 +1,10 @@
 <template>
   <div class="flex flex-col  w-full relative">
       <Navbar/>
-      <div class="w-full pt-32 flex-1 z-0">
+      <div class="w-full pt-24 mt-4 flex-1 z-0">
         <div class="w-full justify-center py-2">
-          <h1 class="text-6xl font-bold text-gray-800">About Us</h1>
+          <h1 class="text-2xl lg:text-6xl font-bold text-gray-800">About Us</h1>
+          <p class="lg:w-1/3 mx-auto px-4 sm:px-0 leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum.</p>
         </div>
         <section class="text-gray-700 body-font">
           <div class="container px-5 pt-12 pb-48 mx-auto flex flex-wrap">
@@ -269,7 +270,7 @@ export default {
     },
   },
   mounted() {
-    setTimeout(() => this.autoSelectedIncrement(), 50)
+    setTimeout(() => this.autoSelectedIncrement(), 5000)
   },
 
 }

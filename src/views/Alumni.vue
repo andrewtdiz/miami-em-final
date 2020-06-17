@@ -4,21 +4,21 @@
        <div class="mt-8 w-full flex flex-col">
             <section class="text-gray-700 body-font">
                 <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-col text-center w-full mb-20">
+                    <div class="flex flex-col text-center w-full mb-8 sm:mb-20">
                     <h1 class="text-2xl lg:text-6xl text-gray-800 font-bold">Alumni</h1>
 
                     <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate. Vivamus id arcu ut nisi eleifend rutrum.</p>
                     </div>
                     <section class="text-gray-700 body-font">
-                        <div class="container px-5 mx-auto">
+                        <div class="container sm:px-5 mx-auto">
                             <div class="flex flex-wrap -m-2">
                             <div v-for="(resident, ind) in alumni" v-scroll-to="{ el: '#' + resident.name.split(' ').join('') }" :key="ind+112" class="p-2 cursor-pointer lg:w-1/3 md:w-1/2 w-full">
-                                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <div class="h-full flex items-center border-gray-200 border p-1 sm:p-4 rounded-lg">
                                 <img alt="team" class="opacity-85 hover:opacity-100 w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80">
                                 <div class="flex-grow">
-                                    <h2 class="text-gray-900 text-lg title-font font-bold">{{resident.name}}</h2>
-                                    <p class="text-md text-gray-600 text-sm"> <span class="font-bold text-gray-800"> Year: </span>{{resident.year}}</p>
-                                    <p class="text-md text-gray-600 text-sm"><span class="font-bold text-gray-800"> Practicing: </span>{{resident.where}}</p>
+                                    <h2 class="text-gray-900 text-lg title-font sm:text-center text-left font-bold">{{resident.name}}</h2>
+                                    <p class="text-md text-gray-800 text-left sm:text-center text-sm"> <span class="font-bold text-gray-900"> Year: </span>{{resident.year}}</p>
+                                    <p class="text-md text-gray-800 text-left sm:text-center text-sm"><span class="font-bold text-gray-900"> Post-Residency: </span>{{resident.where}}</p>
                                 </div>
                                 </div>
                             </div>
