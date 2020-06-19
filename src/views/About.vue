@@ -110,7 +110,7 @@
                 <div class="leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend metus eu nunc lacinia, a vulputate lacus vulputate.</div>
               </div>
               <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 class="title-font font-medium text-3xl text-gray-900">12</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">45</h2>
                 <p class="leading-relaxed">Residents</p>
               </div>
               <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
@@ -122,7 +122,7 @@
                 <p class="leading-relaxed">Patients</p>
               </div>
               <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 class="title-font font-medium text-3xl text-gray-900">4</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">6</h2>
                 <p class="leading-relaxed">Rotation sites</p>
               </div>
             </div>

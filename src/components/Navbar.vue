@@ -1,7 +1,7 @@
 <template>
   <div class="fixed w-full shadow-md flex h-20 justify-center sm:items-stretch items-center bg-white z-10">
       <div class="flex items-center sm:items-stretch container h-full">
-          <router-link to="/" class="h-full flex sm:mx-12 -ml-12 md:-ml-0 mr-auto justify-between items-center">
+          <router-link to="/" class="h-full flex md:mr-auto -ml-12 md:-ml-0 mr-auto justify-between items-center">
             <img class="" src="../assets/jackson_memorial.png" style="height: 150%; width: auto" alt="">
           </router-link>
             <div  v-for="(route,ind) in routes" class="hidden md:block flex items-stretch" :key="ind">

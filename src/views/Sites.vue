@@ -64,7 +64,7 @@
                         <div class="md:w-1/3 w-5/6 mb-10 md:mb-0">
                             <img class="object-cover object-center rounded mx-auto" alt="hero" :src="site.img">
                         </div>
-                        <div class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pr-24', 'md:pr-16']">
+                        <div class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center" :class="ind%2==0 ? ['lg:pl-24', 'md:pl-16'] : ['lg:pl-24', 'md:pl-16']">
                             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{site.title}}
                             </h1>
                             <p class="mb-4 leading-relaxed"><span class="font-bold text-gray-700">Description: </span> <span v-html="site.desc"> </span></p>

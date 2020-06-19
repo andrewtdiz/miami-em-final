@@ -1162,6 +1162,9 @@ export default new Vuex.Store({
     changeNav(state, val) {
       state.navMenu = val
     },
+    viewImage(state) {
+      state.imageViewing = !state.imageViewing
+    },
   },
   actions: {
   },

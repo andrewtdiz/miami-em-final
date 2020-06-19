@@ -49,6 +49,45 @@
         <p class='text-sm font-normal'>© Copyright 2020 Jackson Memorial EM Residency</p>
       </div>
     </div>
+
+    <div v-if="imageViewing" class="h-screen flex justify-between items-center fixed z-40  w-screen">
+      <svg version="1.1" class="fill-current h-12 w-12 text-gray-200 mx-12 z-40 cursor-pointer hover:text-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 491.996 491.996" style="enable-background:new 0 0 491.996 491.996; transform: rotate(90deg)" xml:space="preserve">
+        <g>
+        <g>
+        <path d="M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848
+          L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128
+          c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084
+          c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224
+          C491.996,136.902,489.204,130.046,484.132,124.986z"/>
+        </g>
+        </g>
+      </svg>
+      <div :class="imageViewingDelay ? ['opacity-100'] : ['mt-32', 'opacity-0']" class="image-viewer rounded-md bg-white flex flex-col justify-center flex-shrink items-center z-20">
+        <img class="rounded-md px-6 py-6 object-cover flex-shrink" src="https://img1.wsimg.com/isteam/ip/98c1f477-09ba-4d4d-87bc-8ed1076615eb/IMG-9866.JPG" alt="">
+        <p class="text-md font-medium w-3/4 text-left px-6 mb-4"> <b>LGBTQ+ Acknowledgement Beach Day</b> June 17, 2020 From left to right: Holden Caulfield, Holden Caulfield, Holden Caulfield, Holden Caulfield </p>
+      </div>
+      <svg version="1.1" class="fill-current h-12 w-12 text-gray-200 mx-12 z-40 cursor-pointer hover:text-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 491.996 491.996" style="enable-background:new 0 0 491.996 491.996; transform: rotate(-90deg)" xml:space="preserve">
+        <g>
+        <g>
+        <path d="M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848
+          L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128
+          c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084
+          c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224
+          C491.996,136.902,489.204,130.046,484.132,124.986z"/>
+        </g>
+        </g>
+      </svg>
+
+
+<svg @click="$store.commit('viewImage')" class="absolute mt-6 cursor-pointer mr-12 h-10 w-10 z-30 top-0 right-0 fill-current text-gray-200 hover:text-white" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+</svg>
+      <div @click="$store.commit('viewImage')" class="absolute  top-0 w-full h-full bg-black opacity-50 background-change">
+
+      </div>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -63,6 +102,7 @@ export default {
   data() {
     return {
       openNav: '',
+      imageViewingDelay: false,
     }
   },
   methods: {
@@ -87,13 +127,17 @@ export default {
   watch: {
     $route (){
         this.$store.commit('changeNav', false)
-    }
+    },
+    imageViewing() {
+      if(this.imageViewing) setTimeout(() => this.imageViewingDelay = true, 10)
+      else this.imageViewingDelay = false
+    },
   }
 }
 </script>
 
 
-<style>
+<style scoped>
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -105,6 +149,14 @@ export default {
 
 .nav-menu {
   transition: right 0.3s ease;
+}
+
+.image-viewer {
+  transition: all 0.3s ease;
+}
+
+.background-change {
+  transition: opacity 0.3s ease;
 }
 
 .nav-menu-2 {
