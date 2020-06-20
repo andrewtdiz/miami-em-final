@@ -3,7 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 var VueScrollTo = require('vue-scrollto');
- 
+import VueTilt from 'vue-tilt.js'
+
+Vue.use(VueTilt)
 Vue.use(VueScrollTo, {
   offset: -15,
 })
